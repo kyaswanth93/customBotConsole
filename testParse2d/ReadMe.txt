@@ -1,0 +1,1 @@
+Using this testParse2d program on the mctlab.2d file, we have been able to determine that a parser can be made for the file and that the bot provides us with 542 laser readings.
