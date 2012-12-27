@@ -99,7 +99,6 @@ int main(int argc, char** argv)
 	ArModeTeleop teleop(&robot, "teleop", 't', 'T');
 	ArModeUnguardedTeleop unguardedTeleop(&robot, "unguarded teleop", 'u', 'U');
 	ArModeWander wander(&robot, "wander", 'w', 'W');
-	ArModeTCM2 tcm2(&robot, "tcm2", 'm', 'M', compass);
 	// activate the default mode
 	teleop.activate();
 	// turn on the motors
