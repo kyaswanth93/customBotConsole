@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "customBotConsole", "customBotConsole\customBotConsole.vcxproj", "{757412B2-E713-4C67-AC33-068EF2E91827}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testParse2d", "testParse2d\testParse2d\testParse2d.vcxproj", "{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xInputTest", ".xInputTest\xInputTest\xInputTest.vcxproj", "{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +17,14 @@ Global
 		{757412B2-E713-4C67-AC33-068EF2E91827}.Debug|Win32.Build.0 = Debug|Win32
 		{757412B2-E713-4C67-AC33-068EF2E91827}.Release|Win32.ActiveCfg = Release|Win32
 		{757412B2-E713-4C67-AC33-068EF2E91827}.Release|Win32.Build.0 = Release|Win32
+		{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}.Debug|Win32.Build.0 = Debug|Win32
+		{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}.Release|Win32.ActiveCfg = Release|Win32
+		{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}.Release|Win32.Build.0 = Release|Win32
+		{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}.Debug|Win32.ActiveCfg = Debug|Win32
+		{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}.Debug|Win32.Build.0 = Debug|Win32
+		{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}.Release|Win32.ActiveCfg = Release|Win32
+		{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
