@@ -31,15 +31,15 @@ Matrix* Matrix::operator+(Matrix& newMatrix)
 }
 Matrix* Matrix::operator*(Matrix& newMatrix)
 {
-	Matrix* returnMatrix=new Matrix(rows,cols);
-	if((newMatrix.rows==rows)&&(newMatrix.cols==cols)&&(rows==cols))
+	Matrix* returnMatrix=new Matrix(rows,newMatrix.cols);
+	if(newMatrix.cols==rows)
 	{
 		for(int i=0;i<rows;i++)
 			for(int j=0;j<cols;j++)
 				returnMatrix->setCell(i,j,0);
 		for(int i=0;i<rows;i++)
-			for(int j=0;j<rows;j++)
-				for(int k=0;k<rows;k++)
+			for(int j=0;j<newMatrix.cols;j++)
+				for(int k=0;k<newMatrix.rows;k++)
 					returnMatrix->setCell(i,j,(returnMatrix->getCell(i,j)+(getCell(i,k)*newMatrix.getCell(k,j))));
 	}
 	return returnMatrix;
@@ -52,6 +52,7 @@ void Matrix::print()
 			cout<<getCell(i,j)<<"\t";
 		cout<<"\n";
 	}
+	cout<<"\n";
 }
 void Matrix::setMatrix(Matrix& newMatrix)
 {

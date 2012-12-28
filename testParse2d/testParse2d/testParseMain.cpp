@@ -1,16 +1,13 @@
 #include"testParseIncludes.h"
 
-void main(int argc, char** argv)
+void main()
 {
 	fstream fileToOpen;
 	fstream fileToWrite;
 	string fileName;
-	int debugMode=0;
-	if(argv[0]=="debug")
-		debugMode=1;
 	cout<<"Enter file name (without extension):";
 	cin>>fileName;
-	fileToWrite.open(fileName+".2dparsefile",ios::out);
+	fileToWrite.open(fileName+".2dparse",ios::out);
 	if(!fileToWrite)
 	{
 		cout<<"\nERROR OPENING FILE TO WRITE";
@@ -26,13 +23,6 @@ void main(int argc, char** argv)
 	}
 	char whiteSpaceChar;
 	int newScanNumber;
-	string scanString="Scan No: ";
-	string globalX="Global X: ";
-	string globalY="Global Y: ";
-	string globalT="Global Theta: ";
-	string scanX="X:";
-	string scanY="Y:";
-	string colonString=": ";
 	fileToOpen.unsetf(ios::skipws);
 	string searchTag;
 	for(int i=0;!fileToOpen.eof();i++)
@@ -47,31 +37,20 @@ void main(int argc, char** argv)
 				fileToOpen>>searchTag;
 				stringstream numberString(searchTag);
 				numberString>>newScanNumber;
-				fileToWrite<<scanString+searchTag+"\n";
-				if(debugMode==1)
-					cout<<"Scan "+searchTag+" done...\n";
+				fileToWrite<<searchTag+"\n";
+				cout<<"Scan "+searchTag+" done...\n";
 			}
-			if(searchTag=="robotGlobal:")	//commented lines used to store in arrays, unused as of now.
+			if(searchTag=="robotGlobal:")
 			{
-				//int xpos,ypos;
-				//float theta;
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
-				fileToWrite<<globalX+searchTag+"\n";
-				//stringstream xString(searchTag);
-				//xString>>xpos;
+				fileToWrite<<searchTag+"\n";
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
-				fileToWrite<<globalY+searchTag+"\n";
-				//stringstream yString(searchTag);
-				//yString>>ypos;
+				fileToWrite<<searchTag+"\n";
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
-				fileToWrite<<globalT+searchTag+"\n";
-				//stringstream tString(searchTag);
-				//tString>>theta;
-				if(debugMode==1)
-					cout<<"Global done...\n";
+				fileToWrite<<searchTag+"\n";
 			}
 			if(searchTag=="scan1:")
 			{
@@ -81,15 +60,10 @@ void main(int argc, char** argv)
 						fileToOpen>>whiteSpaceChar;
 					fileToOpen>>whiteSpaceChar;
 					fileToOpen>>searchTag;
-					fileToWrite<<scanX+searchTag+"\n";
+					fileToWrite<<searchTag+"\n";
 					fileToOpen>>whiteSpaceChar;
 					fileToOpen>>searchTag;
-					fileToWrite<<scanY+searchTag+"\n";
-					if(debugMode==1)
-						cout<<"Reading "<<count<<" done...\n";
-					if(count==MAX_READING_COUNT)
-						if(debugMode==1)
-							cout<<"Scan Set Complete...\n";
+					fileToWrite<<searchTag+"\n";	
 				}
 			}
 		}
@@ -99,4 +73,3 @@ void main(int argc, char** argv)
 	cout<<"Scans copied...";
 	_getch();
 }
-
