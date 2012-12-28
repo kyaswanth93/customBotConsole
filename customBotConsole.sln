@@ -5,7 +5,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "customBotConsole", "customB
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testParse2d", "testParse2d\testParse2d\testParse2d.vcxproj", "{1F3AA062-44C1-43AD-B8C9-15EC1B8196C0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xInputTest", ".xInputTest\xInputTest\xInputTest.vcxproj", "{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xInputTest", "xInputTest\xInputTest\xInputTest.vcxproj", "{47B5CE6E-D5EE-48D1-84F6-14E0A4586D84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
