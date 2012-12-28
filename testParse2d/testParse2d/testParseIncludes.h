@@ -5,6 +5,9 @@
 #include<string>
 #include<conio.h>
 #include<fstream>
+#include<sstream>
+
+#include"testParseDefines.h"
 
 using namespace std;
 

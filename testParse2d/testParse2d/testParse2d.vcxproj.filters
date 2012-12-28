@@ -23,5 +23,8 @@
     <ClInclude Include="testParseIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="testParseDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

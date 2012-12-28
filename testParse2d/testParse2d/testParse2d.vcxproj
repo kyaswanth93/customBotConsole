@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="testParseDefines.h" />
     <ClInclude Include="testParseIncludes.h" />
   </ItemGroup>
   <ItemGroup>
