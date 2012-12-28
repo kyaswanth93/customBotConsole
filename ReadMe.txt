@@ -9,3 +9,8 @@ ARIA library used with GNU GPL 2.0,
 with no modification of the source (as of now).
 ARIA's License, which becomes a mandatory license for this program also,
 can be found in LICENSE.txt.
+
+[UPDATE]
+->Made XInput mode
+->Made Parser for .2d files of LRF
+->Merged the different projects into a single solution
