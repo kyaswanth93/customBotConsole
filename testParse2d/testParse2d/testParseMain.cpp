@@ -4,14 +4,17 @@ void main()
 {
 	fstream fileToOpen;
 	fstream fileToWrite;
-	fileToWrite.open("mctlab.2dparsefile",ios::out);
+	string fileName;
+	cout<<"Enter file name (without extension):";
+	cin>>fileName;
+	fileToWrite.open(fileName+".2dparsefile",ios::out);
 	if(!fileToWrite)
 	{
 		cout<<"\nERROR OPENING FILE TO WRITE";
 		_getch();
 		exit(-1);
 	}
-	fileToOpen.open("mctlab.2d",ios::in);
+	fileToOpen.open(fileName+".2d",ios::in);
 	if(!fileToOpen)
 	{
 		cout<<"\nERROR OPENING FILE TO READ";
