@@ -1,10 +1,13 @@
 #include"testParseIncludes.h"
 
-void main()
+void main(int argc, char** argv)
 {
 	fstream fileToOpen;
 	fstream fileToWrite;
 	string fileName;
+	int debugMode=0;
+	if(argv[0]=="debug")
+		debugMode=1;
 	cout<<"Enter file name (without extension):";
 	cin>>fileName;
 	fileToWrite.open(fileName+".2dparsefile",ios::out);
@@ -45,7 +48,8 @@ void main()
 				stringstream numberString(searchTag);
 				numberString>>newScanNumber;
 				fileToWrite<<scanString+searchTag+"\n";
-				cout<<"Scan "+searchTag+" done...\n";
+				if(debugMode==1)
+					cout<<"Scan "+searchTag+" done...\n";
 			}
 			if(searchTag=="robotGlobal:")	//commented lines used to store in arrays, unused as of now.
 			{
@@ -66,7 +70,8 @@ void main()
 				fileToWrite<<globalT+searchTag+"\n";
 				//stringstream tString(searchTag);
 				//tString>>theta;
-				cout<<"Global done...\n";
+				if(debugMode==1)
+					cout<<"Global done...\n";
 			}
 			if(searchTag=="scan1:")
 			{
@@ -80,9 +85,11 @@ void main()
 					fileToOpen>>whiteSpaceChar;
 					fileToOpen>>searchTag;
 					fileToWrite<<scanY+searchTag+"\n";
-					cout<<"Reading "<<count<<" done...\n";
+					if(debugMode==1)
+						cout<<"Reading "<<count<<" done...\n";
 					if(count==MAX_READING_COUNT)
-						cout<<"Scan Set Complete...\n";
+						if(debugMode==1)
+							cout<<"Scan Set Complete...\n";
 				}
 			}
 		}
