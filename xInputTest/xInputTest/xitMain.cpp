@@ -1,5 +1,4 @@
 #include"xitIncludes.h"
-#include <iostream>
 
 CustomController* Player1;
 int main(int argc, char* argv[])
