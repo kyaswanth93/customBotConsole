@@ -60,7 +60,9 @@
     <fileset.main>
       <file>${PROJECT_ROOT}\TwoDParseReader.m</file>
     </fileset.main>
-    <fileset.resources />
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\plotGraph.m</file>
+    </fileset.resources>
     <fileset.package />
     <build-deliverables>
       <file name="readme.txt" location="${PROJECT_ROOT}\2dParseReader\distrib" optional="true">C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader\2dParseReader\distrib\readme.txt</file>
