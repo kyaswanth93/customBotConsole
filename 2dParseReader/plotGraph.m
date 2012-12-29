@@ -1,5 +1,13 @@
-scatter(scan(1).globalPoses(1,:),scan(1).globalPoses(2,:));
+hold off;
+N=1055;
 hold on;
-for n=1:N
-    scatter(scan(n).globalPoses(1,:),scan(1).globalPoses(2,:));
-end
+for i=1:N
+    figure(1);
+    scatter(scan(i).globalPoses(1,:),scan(i).globalPoses(2,:));
+    hold on;
+end;
+for i=1:N
+    figure(2);
+    plot(scan(i).globalPoses(1,:),scan(i).globalPoses(2,:));
+    hold on;
+end;
