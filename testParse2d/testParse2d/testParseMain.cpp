@@ -37,17 +37,17 @@ void main()
 				fileToOpen>>searchTag;
 				stringstream numberString(searchTag);
 				numberString>>newScanNumber;
-				fileToWrite<<searchTag+"\n";
+				fileToWrite<<"Scan "+searchTag+"\n";
 				cout<<"Scan "+searchTag+" done...\n";
 			}
 			if(searchTag=="robotGlobal:")
 			{
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
-				fileToWrite<<searchTag+"\n";
+				fileToWrite<<searchTag+"\t";
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
-				fileToWrite<<searchTag+"\n";
+				fileToWrite<<searchTag+"\t";
 				fileToOpen>>whiteSpaceChar;
 				fileToOpen>>searchTag;
 				fileToWrite<<searchTag+"\n";
@@ -60,7 +60,9 @@ void main()
 						fileToOpen>>whiteSpaceChar;
 					fileToOpen>>whiteSpaceChar;
 					fileToOpen>>searchTag;
-					fileToWrite<<searchTag+"\n";
+					fileToWrite<<searchTag+"\t";
+					if(searchTag.length()<4)
+						fileToWrite<<"\t";
 					fileToOpen>>whiteSpaceChar;
 					fileToOpen>>searchTag;
 					fileToWrite<<searchTag+"\n";	
