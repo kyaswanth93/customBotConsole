@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.deploytool" plugin-version="1.0">
-  <configuration target="target.standalone.win" target-name="Windows Standalone Application" name="LRFReader" location="C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader" file="C:\Users\Kenshin Himura\Documents\MATLAB\LRFReader.prj">
+  <configuration target="target.standalone.win" target-name="Windows Standalone Application" name="2dParseReader" location="C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader" file="C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader\2dParseReader.prj">
     <param.project.name>C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader\2dParseReader.prj</param.project.name>
     <param.target.type>Windows Standalone Application</param.target.type>
-    <param.appname>LRFReader</param.appname>
-    <param.intermediate>${PROJECT_ROOT}\LRFReader\src</param.intermediate>
-    <param.output>${PROJECT_ROOT}\LRFReader\distrib</param.output>
+    <param.appname>2dParseReader</param.appname>
+    <param.intermediate>${PROJECT_ROOT}\2dParseReader\src</param.intermediate>
+    <param.output>${PROJECT_ROOT}\2dParseReader\distrib</param.output>
     <param.embed.ctf>true</param.embed.ctf>
     <param.tbx_on_path>
       <item>all</item>
@@ -58,13 +58,13 @@
       <param.user.defined.mcr.options />
     </unset>
     <fileset.main>
-      <file>${PROJECT_ROOT}\LRFReader.m</file>
+      <file>${PROJECT_ROOT}\TwoDParseReader.m</file>
     </fileset.main>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file name="readme.txt" location="${PROJECT_ROOT}\LRFReader\distrib" optional="true">C:\Users\Kenshin Himura\Documents\MATLAB\LRFReader\distrib\readme.txt</file>
-      <file name="LRFReader.exe" location="${PROJECT_ROOT}\LRFReader\distrib" optional="false">C:\Users\Kenshin Himura\Documents\MATLAB\LRFReader\distrib\LRFReader.exe</file>
+      <file name="readme.txt" location="${PROJECT_ROOT}\2dParseReader\distrib" optional="true">C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader\2dParseReader\distrib\readme.txt</file>
+      <file name="2dParseReader.exe" location="${PROJECT_ROOT}\2dParseReader\distrib" optional="false">C:\Users\Kenshin Himura\Documents\GitHub\customBotConsole\2dParseReader\2dParseReader\distrib\2dParseReader.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
