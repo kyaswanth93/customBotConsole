@@ -1,5 +1,5 @@
+function plotGlobal(N,scan)
 hold off;
-N=50;
 hold on;
 for i=1:N
     figure(1);
