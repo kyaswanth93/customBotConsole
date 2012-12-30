@@ -16,12 +16,8 @@ can be found in LICENSE.txt.
 ->Merged the different projects into a single solution
 ->Created a Matlab project to read and process 2d parse files.
 ->Tested and updated 2dParseReader project
-<<<<<<< HEAD
-->Found error lies with odometric readings.
-=======
 ->Found error lies with odometric readings.
 
 [UPDATE]
 Created debug branch to push to master later, and to allow collaboration.
 Current Working Branch: debug
->>>>>>> origin/debug
