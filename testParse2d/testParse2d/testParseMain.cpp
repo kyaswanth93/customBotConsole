@@ -40,6 +40,44 @@ void main()
 				fileToWrite<<"Scan "+searchTag+"\n";
 				cout<<"Scan "+searchTag+" done...\n";
 			}
+			if(searchTag=="time:")
+			{
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\n";
+			}
+			if(searchTag=="velocities:")
+			{
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\t";
+				if(searchTag.length()<4)
+					fileToWrite<<"\t";
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\t";
+				if(searchTag.length()<4)
+					fileToWrite<<"\t";
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\n";
+			}
+			if(searchTag=="robot:")
+			{
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\t";
+				if(searchTag.length()<4)
+					fileToWrite<<"\t";
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\t";
+				if(searchTag.length()<4)
+					fileToWrite<<"\t";
+				fileToOpen>>whiteSpaceChar;
+				fileToOpen>>searchTag;
+				fileToWrite<<searchTag+"\n";
+			}
 			if(searchTag=="robotGlobal:")
 			{
 				fileToOpen>>whiteSpaceChar;
