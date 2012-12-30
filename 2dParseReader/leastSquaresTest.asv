@@ -5,26 +5,42 @@ disp(y);
 x0(1:2,:)=[x;y];
 x0(3:3,:)=ones(size(x),size(y));
 disp(x0);
-a=pi/4;
-b=pi/3;
+a=60*pi/180;
+b=30*pi/180;
 tA=[cos(a),-sin(a),0;sin(a),cos(a),0;0,0,1];
 tB=[cos(b),-sin(b),0;sin(b),cos(b),0;0,0,1];
-xA=tA*x0;
-xB=tB*x0;
-xB(
+txA=eye(3,3);
+txA(1,3)=2;
+txA(2,3)=1;
+txB=eye(3,3);
+txB(1,3)=1;
+txB(2,3)=2;
+xA=txA*x0;
+xA=tA*xB;
+xB=txB*x0;
+xB=tB*xB;
 minVal=Inf;
 lsQ=0;
-for t=-180:180
-    theta=t*pi/180;
+txC=eye(3,3);
+txC(3,3)=1;
+for t=-30:30
+    theta=(t)*pi/180;
     lsQ=0;
     tC=[cos(theta),-sin(theta),0;sin(theta),cos(theta),0;0,0,1];
-    xC=tC*x0;
     for i=1:5
-      lsQ=lsQ+(xB(i)-xC(i))^2;
-    end;
-    if(lsQ<minVal)
-        minVal=lsQ;
-        xLS=xC;
+        for j=1:5
+            txC(1,3)=i;
+            txC(2,3)=j;
+            xC=txC*x0;
+            xC=tC*xC;
+            for k=1:5
+                lsQ=lsQ+(xB(k)-xC(k))^2;
+            end;
+            if(lsQ<minVal)
+                minVal=lsQ;
+                xLS=xC;
+            end;
+        end;
     end;
 end;
 plot(xB(1,:),xB(2,:),xLS(1,:),xLS(2,:));
