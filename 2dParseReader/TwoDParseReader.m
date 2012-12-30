@@ -5,13 +5,8 @@ velocT=zeros(1,3);
 timE=1;
 localP=zeros(2,541);
 globalPs=zeros(3,541);
-mulA=zeros(3,3);
-mulB=zeros(3,3);
 onesM=ones(541,1);
 tempPose=zeros(3,1);
-originX=0;
-originY=0;
-originT=0;
 scan=struct('count',c,'time',timE,'velo',velocT,'robotPose',robotP,'globalPose',globalP,'localPose',localP,'globalPoses',globalPs);
 filename = 'df.2dparse';
 fid = fopen(filename);
@@ -27,21 +22,8 @@ for n = 1:N
     scan(n).localPose(:,3:3)=onesM;
     scan(n).localPose=scan(n).localPose';
     for m=1:541
-        mulB(3,3)=1;
-        mulB(1,3)=scan(n).globalPose(1,1);
-        mulB(2,3)=scan(n).globalPose(1,2);
-        mulB(1,1)=1;
-        mulB(2,2)=1;
-        mulA(3,3)=1;
-        theta=scan(n).globalPose(1,3)/180*pi;
-        mulA(1,1)=cos(theta);
-        mulA(2,1)=sin(theta);
-        mulA(1,2)=-mulA(2,1);
-        mulA(2,2)=mulA(1,1);
-        tempPose=mulA\scan(n).localPose(:,m);
-        tempPose=mulB\tempPose;
-        scan(n).globalPoses(:,m)=tempPose;
+        scan(n).globalPoses(:,m)=toGlobal(scan(n).localPose(:,m),scan(n).globalPose);
     end
 end
 fclose(fid);
-plotGraph;
+plotGlobal(25,scan);
