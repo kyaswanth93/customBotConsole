@@ -1,6 +1,6 @@
 CustomBotConsole
 by Kenshin Himura, governed by GNU GPL v3 and CC-BY-NC-SA Licenses (see gpl.txt and ccbyncsa.txt) 
-ReadMe Version 0.3
+ReadMe Version 0.5
 
 P3AT with Sick LMS100 Custom Console Application for Windows
 For FINAL YEAR PROJECT Management.
@@ -19,8 +19,13 @@ can be found in LICENSE.txt.
 ->Found error lies with odometric readings.
 
 [UPDATE]
-Created debugMain branch to push to master later, and to allow collaboration.
-Current Working Branch: debugMain
+Created debug branches to push to master later, and to allow collaboration.
+Current Working Debug Branch: debugKen
+branch debugBala branched from debugKen for use by balakumar-s
 
 [MERGE CONFLICT TEST - PASSED]
 Merge Conflicts Resolved.
+
+[UPDATE]
+Learnt how to resolve merge conflicts.
+->"No more merge conflict issues da Bala."
