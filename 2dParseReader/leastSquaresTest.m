@@ -2,8 +2,13 @@ x=[1 3 5 7 9];
 y=(4*x)+5;
 disp(x);
 disp(y);
-x0(1:2,:)=[x;y];
+x0=zeros(3,4);
+x0(1:2,:)=[x(1,1:4);y(1,1:4)];
 x0(3:3,:)=ones(size(x),size(y));
+x0(2,4)=10;
+x1=x0;
+x1(1:2,1:4)=[x(1,2:5);y(1,2:5)];
+x1(2,3)=11;
 disp(x0);
 a=60*pi/180;
 b=30*pi/180;
@@ -17,7 +22,7 @@ txB(1,3)=1;
 txB(2,3)=2;
 xA=txA*x0;
 xA=tA*xB;
-xB=txB*x0;
+xB=txB*x1;
 xB=tB*xB;
 minVal=Inf;
 lsQ=0;
@@ -33,8 +38,10 @@ for t=-45:45
             xC=txC*x0;
             xC=tC*xC;
             lsQ=0;
-            for k=1:5
-                lsQ=lsQ+(xB(k)-xC(k))^2;
+            for k=1:4
+                for l=1:4
+                    lsQ=lsQ+((xB(1,k)-xC(1,l))^2)+((xB(2,k)-xC(2,l))^2);
+                end;
             end;
             if(lsQ<minVal)
                 minVal=lsQ;
