@@ -19,6 +19,5 @@ can be found in LICENSE.txt.
 ->Found error lies with odometric readings.
 
 [UPDATE]
-Created debug branch to push to master later, and to allow collaboration.
+Created debugMain branch to push to master later, and to allow collaboration.
 Current Working Branch: debugMain
-Ken updates this.
