@@ -14,3 +14,10 @@ can be found in LICENSE.txt.
 ->Made XInput mode
 ->Made Parser for .2d files of LRF
 ->Merged the different projects into a single solution
+->Created a Matlab project to read and process 2d parse files.
+->Tested and updated 2dParseReader project
+->Found error lies with odometric readings.
+
+[UPDATE]
+Created debug branch to push to master later, and to allow collaboration.
+Current Working Branch: debug
