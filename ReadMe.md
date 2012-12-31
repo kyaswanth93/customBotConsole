@@ -1,7 +1,7 @@
 #CustomBotConsole
 **by Kenshin Himura *(Sudarsan Balaji)*,**
-*governed by GNU GPL v3 and CC-BY-NC-SA Licenses (see gpl.txt and ccbyncsa.txt) *
-*ReadMe Version 0.8*
+governed by *GNU GPL v3 and CC-BY-NC-SA Licenses* (see gpl.txt and ccbyncsa.txt)
+_ReadMe Version **0.8**_
 *This repository holds various project and project-related directories pertaining to our final year project.*
 
 ##customBotConsole
@@ -16,11 +16,11 @@ is our initial attempt in C++ programming to convert the laser readings to globa
 is the MATLAB project directory of the parser and processor of the .2dparse files. This is the currently active project and all new/modified code will be pushed here (as of now). A separate ReadMe should exist for this project to keep works on it updated, considering the scope of this MATLAB project.
 
 ##Updates and Stuff
-*Created debug branches to push to master later, and to allow collaboration.
-*Current Working Debug Branch: debugKen
-*Branch debugBala branched from debugKen for use by balakumar-s
-*Visit http://www.github.com/kenshinthebattosai/customBotConsole/network for network/branch information.
+* Created debug branches to push to master later, and to allow collaboration.
+* Current Working Debug Branch: debugKen
+* Branch debugBala branched from debugKen for use by balakumar-s
+* Visit http://www.github.com/kenshinthebattosai/customBotConsole/network for network/branch information.
 ###Ongoing Branches of Work
 ####(to be updated every once branches of work are finished)
-*kenshinthebattosai currently working on implementing Incremental Fit
-*balakumar-s currently working on converting readings to images and processing them.
+* kenshinthebattosai currently working on implementing Incremental Fit
+* balakumar-s currently working on converting readings to images and processing them.
