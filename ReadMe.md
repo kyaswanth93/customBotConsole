@@ -1,7 +1,10 @@
 #CustomBotConsole
 **by Kenshin Himura *(Sudarsan Balaji)*,**
+
 governed by *GNU GPL v3 and CC-BY-NC-SA Licenses* (see gpl.txt and ccbyncsa.txt)
+
 _ReadMe Version **0.8**_
+
 *This repository holds various project and project-related directories pertaining to our final year project.*
 
 ##customBotConsole
@@ -20,7 +23,8 @@ is the MATLAB project directory of the parser and processor of the .2dparse file
 * Current Working Debug Branch: debugKen
 * Branch debugBala branched from debugKen for use by balakumar-s
 * Visit http://www.github.com/kenshinthebattosai/customBotConsole/network for network/branch information.
-###Ongoing Branches of Work
-####(to be updated every once branches of work are finished)
+
+##Ongoing Branches of Work
+(to be updated every once branches of work are finished)
 * kenshinthebattosai currently working on implementing Incremental Fit
 * balakumar-s currently working on converting readings to images and processing them.
