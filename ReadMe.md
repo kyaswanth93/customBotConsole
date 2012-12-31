@@ -1,11 +1,10 @@
 #CustomBotConsole
-**by Kenshin Himura *(Sudarsan Balaji)*,**
+* Authors: Kenshin Himura *(Sudarsan Balaji)*, Balakumar S
+* License: *GNU GPL v3 and CC-BY-NC-SA Licenses* (see gpl.txt and ccbyncsa.txt)
+* ReadMe Version: 1.0
 
-governed by *GNU GPL v3 and CC-BY-NC-SA Licenses* (see gpl.txt and ccbyncsa.txt)
-
-_ReadMe Version **0.8**_
-
-*This repository holds various project and project-related directories pertaining to our final year project.*
+##Description
+This repository holds various project and project-related directories pertaining to our final year project. The main project directories are explained as below.
 
 ##customBotConsole
 holds our coding and creation of a custom Console Application for Windows, using Microsoft Visual Studio 2012 Ultimate for Windows 8 (hereafter referred to as VS2012), built in C++, meant to handle a Pioneer-3AT mobile robot equipped with Sick LMS100, with a FOV of -135 to +135 degrees, providing a total of 541 readings per scan. ARIA library used with GNU GPL 2.0, with no modification of the source (as of now). ARIA's License, which becomes a mandatory license for this program also, can be found in LICENSE.txt.
@@ -20,7 +19,7 @@ is the MATLAB project directory of the parser and processor of the .2dparse file
 
 ##Updates and Stuff
 * Created debug branches to push to master later, and to allow collaboration.
-* Current Working Debug Branch: debugKen
+* Branch debugKen branched from master for use by kenshinthebattosai
 * Branch debugBala branched from debugKen for use by balakumar-s
 * Visit http://www.github.com/kenshinthebattosai/customBotConsole/network for network/branch information.
 
