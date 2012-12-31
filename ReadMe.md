@@ -19,8 +19,8 @@ is the MATLAB project directory of the parser and processor of the .2dparse file
 
 ##Updates and Stuff
 * Created debug branches to push to master later, and to allow collaboration.
-* Branch [debugKen](http://www.gihub.com/kenshinthebattosai/customBotConsole/tree/debugKen) branched from master for use by [kenshinthebattosai](http://www.github.com/kenshinthebattosai)
-* Branch [debugBala](http://www.gihub.com/kenshinthebattosai/customBotConsole/tree/debugBala) branched from debugKen for use by [balakumar-s](http://www.github.com/balakumar-s)
+* Branch [debugKen](http://www.github.com/kenshinthebattosai/customBotConsole/tree/debugKen) branched from master for use by [kenshinthebattosai](http://www.github.com/kenshinthebattosai)
+* Branch [debugBala](http://www.github.com/kenshinthebattosai/customBotConsole/tree/debugBala) branched from debugKen for use by [balakumar-s](http://www.github.com/balakumar-s)
 * Visit [network branch page of this project](http://www.github.com/kenshinthebattosai/customBotConsole/network) for network/branch information.
 
 ##Ongoing Branches of Work
