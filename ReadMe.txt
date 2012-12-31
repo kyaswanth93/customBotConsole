@@ -1,5 +1,5 @@
 CustomBotConsole
-by Kenshin Himura, governed by GNU GPL v3 and CC-BY-NC-SA Licenses (see gpl.txt and ccbyncsa.txt) 
+by Kenshin Himura (Sudarsan Balaji), governed by GNU GPL v3 and CC-BY-NC-SA Licenses (see gpl.txt and ccbyncsa.txt) 
 ReadMe Version 0.8
 
 This repository holds various project and project-related directories pertaining to our final year project.
