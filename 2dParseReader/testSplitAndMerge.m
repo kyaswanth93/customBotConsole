@@ -6,6 +6,11 @@ xy(1,:)=x;
 xy(2,:)=y;
 %test splitAndMerge
 splitAndMergeReturn=splitAndMerge(xy,1);
+%modify results to suit sort order
+n=size(splitAndMergeReturn);
+nR = n(1);
+nC = n(2);
+%-----have to post code here-----
 %plot split and merge results
 figure(1);
 plot(splitAndMergeReturn(:,1),splitAndMergeReturn(:,2));
