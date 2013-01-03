@@ -34,7 +34,7 @@ while(stop~=1)
     end;
     returnList=[Q1 Q2]';
     if(maxValue>thresh)
-       returnList=intersect(masterList',splitAndMerge(masterList(:,1:j),thresh/2),'rows');
+       returnList=union(returnList,intersect(masterList',splitAndMerge(masterList(:,1:j),thresh/2),'rows'),'rows');
        returnList=union(returnList,intersect(masterList',splitAndMerge(masterList(:,j:n),thresh/2),'rows'),'rows');
     end;
     stop=stop+1;
