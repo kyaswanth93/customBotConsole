@@ -17,3 +17,4 @@ for i=1:N
 end;
 %rotate camera for debug
 %view(70,90);
+end
