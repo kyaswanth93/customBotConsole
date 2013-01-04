@@ -22,7 +22,7 @@ for n = 1:N
     scan(n).localPoses(:,3:3)=onesM;
     scan(n).localPoses=scan(n).localPoses';
     for m=1:541
-        scan(n).globalPoses(:,m)=toGlobal(scan(n).localPoses(:,m),scan(n).robotPose);
+        scan(n).globalPoses(:,m)=toGlobal(scan(n).localPoses(:,m),scan(n).globalPose);
     end
 end
 fclose(fid);

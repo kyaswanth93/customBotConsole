@@ -1,17 +1,31 @@
 function [lsResult] = lsFit(scan,n1,n2)
-timeDone=scan(n2).time-scan(n1).time;
-xTolerance=round(timeDone*(scan(n1).velo(1,1)+scan(n2).velo(1,1)));
-yTolerance=xTolerance;
-thetaTolerance=(timeDone*(scan(n1).velo(1,2)+scan(n2).velo(1,2)));
+%x,y tolerances
+%10mm/meter error
+%xTolerance=round(10*((scan(n2).globalPose(1,1)-scan(n1).globalPose(1,1)))/1000);
+%yTolerance=round(10*((scan(n2).globalPose(1,2)-scan(n1).globalPose(1,2)))/1000);
+%--commented out--%
+%timeDone=scan(n2).time-scan(n1).time;
+%xTolerance=round((timeDone*(scan(n1).velo(1,1)+scan(n2).velo(1,1)))/2);
+%yTolerance=xTolerance;
+%--commented out--%
+%theta tolerances
+%1 degree per meter travelled
+%thetaTolerance=round(sqrt(xTolerance^2+yTolerance^2)/10);
+%also, 2 degrees per rotation
+%thetaTolerance=thetaTolerance+round((timeDone*(scan(n1).velo(1,2)+scan(n2).velo(1,2)))/2);
+xTolerance=5;
+yTolerance=5;
+thetaTolerance=180;
 xB=scan(n2).globalPoses(:,:);
-x=scan(n1).robotPose(1,1);
-y=scan(n1).robotPose(1,2);
-a=scan(n1).robotPose(1,3);
+x=scan(n1).globalPose(1,1);
+y=scan(n1).globalPose(1,2);
+a=scan(n1).globalPose(1,3);
 txC=eye(3,3);
 minVal=Inf;
 lsT=0;
 lsX=0;
 lsY=0;
+xLS=eye(3,3);
 for t=-thetaTolerance:thetaTolerance
     theta=(t+a)*pi/180;
     tC=[cos(theta),-sin(theta),0;sin(theta),cos(theta),0;0,0,1];
@@ -37,8 +51,8 @@ for t=-thetaTolerance:thetaTolerance
         end;
     end;
 end;
-scatter(xB(1,:),xB(2,:));
+plot(xB(1,:),xB(2,:));
 hold on;
-scatter(xLS(1,:),xLS(2,:));
+plot(xLS(1,:),xLS(2,:));
 lsResult=[minVal,lsX,lsY,lsT];
 end
