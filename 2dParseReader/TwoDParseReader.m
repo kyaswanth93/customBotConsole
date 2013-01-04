@@ -22,11 +22,11 @@ for n = 1:N
     scan(n).localPoses(:,3:3)=onesM;
     scan(n).localPoses=scan(n).localPoses';
     for m=1:541
-        scan(n).globalPoses(:,m)=toGlobal(scan(n).localPoses(:,m),scan(n).globalPose);
+        scan(n).globalPoses(:,m)=toGlobal(scan(n).localPoses(:,m),scan(n).globalPose,scan(1).globalPose);
     end
 end
 fclose(fid);
 plotGlobal(25,scan);
-t5t6=lsFit(scan,25,26);
+%t5t6=lsFit(scan,25,26);
 getUnion(25,scan);
 %lines=iFit(scan(1).globalPoses(:,:));

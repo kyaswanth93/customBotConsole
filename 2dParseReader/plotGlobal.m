@@ -8,7 +8,7 @@ for i=1:N
     hold on;
 end;
 %rotate camera for debug 
-view(70,90);
+%view(70,90);
 %plot coordinate graph for n scans
 for i=1:N
     figure(2);
@@ -16,4 +16,4 @@ for i=1:N
     hold on;
 end;
 %rotate camera for debug
-view(70,90);
+%view(70,90);
